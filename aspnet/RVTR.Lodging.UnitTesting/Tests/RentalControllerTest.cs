@@ -56,8 +56,8 @@ namespace RVTR.Lodging.UnitTesting.Tests
     public async void Test_Controller_Get()
     {
       var resultMany = await _controller.Get();
-      var resultFail = await _controller.Get(0);
-      var resultOne = await _controller.Get(1);
+      var resultFail = await _controller.GetAllRentalsById(0);
+      var resultOne = await _controller.GetAllRentalsById(1);
 
       Assert.NotNull(resultMany);
       Assert.NotNull(resultFail);
