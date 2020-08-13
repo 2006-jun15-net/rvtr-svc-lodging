@@ -62,21 +62,19 @@ namespace RVTR.Lodging.WebApi.Controllers
     }
 
     /// <summary>
-    ///
+    /// get all rentals by lodging ID.
     /// </summary>
-    /// <param name="id"></param>
+    /// <param name="lodgingId"></param>
     /// <returns></returns>
     [HttpGet("{id}")]
-    public async Task<IActionResult> Get(int id)
+    public async Task<IActionResult> GetAllRentalsById(int lodgingId)
     {
-      try
+      if(lodgingId <= 0)
       {
-        return Ok(await _unitOfWork.Rental.SelectAsync(id));
+        return NotFound(lodgingId);
       }
-      catch
-      {
-        return NotFound(id);
-      }
+      return Ok(await _unitOfWork.Rental.SelectAsync(lodgingId));
+      
     }
 
     /// <summary>
