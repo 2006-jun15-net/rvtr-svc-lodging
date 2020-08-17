@@ -8,7 +8,7 @@ using RVTR.Lodging.ObjectModel.Models;
 namespace RVTR.Lodging.WebApi.Controllers
 {
   /// <summary>
-  ///
+  /// Lodging controller.
   /// </summary>
   [ApiController]
   [ApiVersion("0.0")]
@@ -20,7 +20,7 @@ namespace RVTR.Lodging.WebApi.Controllers
     private readonly UnitOfWork _unitOfWork;
 
     /// <summary>
-    ///
+    /// Lodging constructor
     /// </summary>
     /// <param name="logger"></param>
     /// <param name="unitOfWork"></param>
@@ -31,7 +31,7 @@ namespace RVTR.Lodging.WebApi.Controllers
     }
 
     /// <summary>
-    ///
+    /// deletes a lodging with a specified id.
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
@@ -52,7 +52,7 @@ namespace RVTR.Lodging.WebApi.Controllers
     }
 
     /// <summary>
-    ///
+    /// gets all lodgings.
     /// </summary>
     /// <returns></returns>
     [HttpGet]
@@ -62,7 +62,7 @@ namespace RVTR.Lodging.WebApi.Controllers
     }
 
     /// <summary>
-    ///
+    /// gets all lodgings for a specified id.
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
@@ -85,7 +85,7 @@ namespace RVTR.Lodging.WebApi.Controllers
     }
 
     /// <summary>
-    ///
+    /// Adds a lodging 
     /// </summary>
     /// <param name="lodging"></param>
     /// <returns></returns>
@@ -99,7 +99,7 @@ namespace RVTR.Lodging.WebApi.Controllers
     }
 
     /// <summary>
-    ///
+    /// Updates a lodging
     /// </summary>
     /// <param name="lodging"></param>
     /// <returns></returns>
